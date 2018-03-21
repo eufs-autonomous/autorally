@@ -1,6 +1,6 @@
 add_library(ConstantSpeedController ConstantSpeedController.cpp)
 add_dependencies(ConstantSpeedController autorally_msgs_gencpp)
-target_link_libraries(ConstantSpeedController ${catkin_LIBRARIES} ${Boost_LIBRARIES} RingBuffer)
+target_link_libraries(ConstantSpeedController ${catkin_LIBRARIES} ${Boost_LIBRARIES})
 
 install(TARGETS
   ConstantSpeedController

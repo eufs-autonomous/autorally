@@ -15,6 +15,7 @@ find_package(catkin REQUIRED COMPONENTS
   tf
   dynamic_reconfigure
   cv_bridge
+  imu_3dm_gx4
 )
 
 find_package(cmake_modules REQUIRED)
@@ -56,12 +57,12 @@ add_subdirectory(src/camera_trigger)
 add_subdirectory(src/CameraAutoBalance)
 add_subdirectory(src/WheelOdometry)
 
-#install(TARGETS
-# 
-#  ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-#  LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-#  RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-#)
+install(TARGETS
+ 
+  ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+  LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+ RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
 
 install(PROGRAMS
   src/systemStatus/systemStatus.py
